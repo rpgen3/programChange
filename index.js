@@ -132,7 +132,7 @@
             }
             viewStatus('音色を初期化した');
         }).addClass('btn');
-        const selectPrograms = [...Array(0x10).keys()].map(v => rpgen3.addSelectGroup(html, {
+        const selectPrograms = [...Array(0x10).keys()].map(v => rpgen3.addGroupedSelect(html, {
             label: `Ch.${v + 1}`,
             save: true,
             list: GM_list
