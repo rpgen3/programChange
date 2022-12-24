@@ -1,0 +1,164 @@
+# https://ja.wikipedia.org/wiki/General_MIDI#Melodic_sounds
+
+
+No.|HEX|English|日本語
+
+Piano
+1|00|Acoustic Piano|アコースティックピアノ
+2|01|Bright Piano|ブライトピアノ
+3|02|Electric Grand Piano|エレクトリック・グランドピアノ
+4|03|Honky-tonk Piano|ホンキートンクピアノ
+5|04|Electric Piano|エレクトリックピアノ
+6|05|Electric Piano 2|FMエレクトリックピアノ
+7|06|Harpsichord|ハープシコード
+8|07|Clavi|クラビネット
+
+Chromatic Percussion
+9|08|Celesta|チェレスタ
+10|09|Glockenspiel|グロッケンシュピール
+11|0A|Music box|オルゴール
+12|0B|Vibraphone|ヴィブラフォン
+13|0C|Marimba|マリンバ
+14|0D|Xylophone|シロフォン
+15|0E|Tubular Bell|チューブラーベル
+16|0F|Dulcimer|ダルシマー
+
+Organ
+17|10|Drawbar Organ|ドローバーオルガン
+18|11|Percussive Organ|パーカッシブオルガン
+19|12|Rock Organ|ロックオルガン
+20|13|Church organ|チャーチオルガン
+21|14|Reed organ|リードオルガン
+22|15|Accordion|アコーディオン
+23|16|Harmonica|ハーモニカ
+24|17|Tango Accordion|タンゴアコーディオン
+
+Guitar
+25|18|Acoustic Guitar (nylon)|アコースティックギター（ナイロン弦）
+26|19|Acoustic Guitar (steel)|アコースティックギター（スチール弦）
+27|1A|Electric Guitar (jazz)|ジャズギター
+28|1B|Electric Guitar (clean)|クリーンギター
+29|1C|Electric Guitar (muted)|ミュートギター
+30|1D|Overdriven Guitar|オーバードライブギター
+31|1E|Distortion Guitar|ディストーションギター
+32|1F|Guitar harmonics|ギターハーモニクス
+
+Bass
+33|20|Acoustic Bass|アコースティックベース
+34|21|Electric Bass (finger)|フィンガー・ベース
+35|22|Electric Bass (pick)|ピック・ベース
+36|23|Fretless Bass|フレットレスベース
+37|24|Slap Bass 1|スラップベース 1
+38|25|Slap Bass 2|スラップベース 2
+39|26|Synth Bass 1|シンセベース 1
+40|27|Synth Bass 2|シンセベース 2
+
+Strings
+41|28|Violin|ヴァイオリン
+42|29|Viola|ヴィオラ
+43|2A|Cello|チェロ
+44|2B|Double bass|コントラバス
+45|2C|Tremolo Strings|トレモロ
+46|2D|Pizzicato Strings|ピッチカート
+47|2E|Orchestral Harp|ハープ
+48|2F|Timpani|ティンパニ
+
+Ensemble
+49|30|String Ensemble 1|ストリングアンサンブル
+50|31|String Ensemble 2|スローストリングアンサンブル
+51|32|Synth Strings 1|シンセストリングス
+52|33|Synth Strings 2|シンセストリングス2
+53|34|Voice Aahs|声「アー」
+54|35|Voice Oohs|声「ドゥー」
+55|36|Synth Voice|シンセヴォイス
+56|37|Orchestra Hit|オーケストラヒット
+
+Brass
+57|38|Trumpet|トランペット
+58|39|Trombone|トロンボーン
+59|3A|Tuba|チューバ
+60|3B|Muted Trumpet|ミュートトランペット
+61|3C|French horn|フレンチ・ホルン
+62|3D|Brass Section|ブラスセクション
+63|3E|Synth Brass 1|シンセブラス 1
+64|3F|Synth Brass 2|シンセブラス 2
+
+Reed
+65|40|Soprano Sax|ソプラノサックス
+66|41|Alto Sax|アルトサックス
+67|42|Tenor Sax|テナーサックス
+68|43|Baritone Sax|バリトンサックス
+69|44|Oboe|オーボエ
+70|45|English Horn|イングリッシュホルン
+71|46|Bassoon|ファゴット
+72|47|Clarinet|クラリネット
+
+Pipe
+73|48|Piccolo|ピッコロ
+74|49|Flute|フルート
+75|4A|Recorder|リコーダー
+76|4B|Pan Flute|パンフルート
+77|4C|Blown Bottle|ブロウンボトル（吹きガラス瓶）
+78|4D|Shakuhachi|尺八
+79|4E|Whistle|口笛
+80|4F|Ocarina|オカリナ
+
+Synth Lead
+81|50|Lead 1 (square)|正方波
+82|51|Lead 2 (sawtooth)|ノコギリ波
+83|52|Lead 3 (calliope)|カリオペリード
+84|53|Lead 4 (chiff)|チフリード
+85|54|Lead 5 (charang)|チャランゴリード
+86|55|Lead 6 (voice)|声リード
+87|56|Lead 7 (fifths)|フィフスズリード
+88|57|Lead 8 (bass + lead)|ベース + リード
+
+Synth Pad
+89|58|Pad 1 (Fantasia)|ファンタジア
+90|59|Pad 2 (warm)|ウォーム
+91|5A|Pad 3 (polysynth)|ポリシンセ
+92|5B|Pad 4 (choir)|クワイア
+93|5C|Pad 5 (bowed)|ボウ
+94|5D|Pad 6 (metallic)|メタリック
+95|5E|Pad 7 (halo)|ハロー
+96|5F|Pad 8 (sweep)|スウィープ
+
+Synth Effects
+97|60|FX 1 (rain)|雨
+98|61|FX 2 (soundtrack)|サウンドトラック
+99|62|FX 3 (crystal)|クリスタル
+100|63|FX 4 (atmosphere)|アトモスフィア
+101|64|FX 5 (brightness)|ブライトネス
+102|65|FX 6 (goblins)|ゴブリン
+103|66|FX 7 (echoes)|エコー[要曖昧さ回避]
+104|67|FX 8 (sci-fi)|サイファイ
+
+Ethnic
+105|68|Sitar|シタール
+106|69|Banjo|バンジョー
+107|6A|Shamisen|三味線
+108|6B|Koto|琴
+109|6C|Kalimba|カリンバ
+110|6D|Bagpipe|バグパイプ
+111|6E|Fiddle|フィドル
+112|6F|Shanai|シャハナーイ
+
+Percussive
+113|70|Tinkle Bell|ティンクルベル
+114|71|Agogo|アゴゴ
+115|72|Steel Drums|スチールドラム
+116|73|Woodblock|ウッドブロック
+117|74|Taiko Drum|太鼓
+118|75|Melodic Tom|メロディックタム
+119|76|Synth Drum|シンセドラム
+120|77|Reverse Cymbal|逆シンバル
+
+Sound effects
+121|78|Guitar Fret Noise|ギターフレットノイズ
+122|79|Breath Noise|ブレスノイズ
+123|7A|Seashore|海岸
+124|7B|Bird Tweet|鳥の囀り
+125|7C|Telephone Ring|電話のベル
+126|7D|Helicopter|ヘリコプター
+127|7E|Applause|拍手
+128|7F|Gunshot|銃声
