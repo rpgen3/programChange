@@ -130,7 +130,7 @@
             for (let i = 0; i < 0x10; i++) {
                 g_midiOutput.programChange({data: {programChange: selectPrograms[i]()}});
             }
-            viewStatus('音色を初期化した');
+            viewStatus('音色を設定した');
         }).addClass('btn');
         const selectPrograms = [...Array(0x10).keys()].map(v => rpgen3.addGroupedSelect(html, {
             label: `Ch.${v + 1}`,
