@@ -87,13 +87,23 @@
         rpgen3.addBtn(html, '出力テスト(C5)', () => {
             try {
                 const channel = selectMidiChannel();
-                g_midiOutput.noteOn({
-                    data: {channel, pitch: 0x48, velocity: 100}
-                });
-                g_midiOutput.noteOn({
-                    data: {channel, pitch: 0x48, velocity: 0},
-                    timestamp: performance.now() + 500
-                });
+                if (channel === null) {
+                    g_midiOutput.allChannels.noteOn({
+                        data: {channel, pitch: 0x48, velocity: 100}
+                    });
+                    g_midiOutput.allChannels.noteOn({
+                        data: {channel, pitch: 0x48, velocity: 0},
+                        timestamp: performance.now() + 500
+                    });
+                } else {
+                    g_midiOutput.noteOn({
+                        data: {channel, pitch: 0x48, velocity: 100}
+                    });
+                    g_midiOutput.noteOn({
+                        data: {channel, pitch: 0x48, velocity: 0},
+                        timestamp: performance.now() + 500
+                    });
+                }
             } catch (err) {
                 console.error(err);
                 alert(err);
@@ -123,12 +133,12 @@
         });
         $('<dd>').appendTo(html);
         rpgen3.addBtn(html, '音色の初期化', async () => {
-            g_midiOutput.allChannels.programChange({data: {programChange: 0x00}});
+            g_midiOutput.allChannels.programChange({data: {program: 0x00}});
             viewStatus('音色を初期化した');
         }).addClass('btn');
         rpgen3.addBtn(html, '音色の設定', async () => {
             for (let i = 0; i < 0x10; i++) {
-                g_midiOutput.programChange({data: {programChange: selectPrograms[i]()}});
+                g_midiOutput.programChange({data: {channel: i, program: selectPrograms[i]()}});
             }
             viewStatus('音色を設定した');
         }).addClass('btn');
