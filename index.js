@@ -141,10 +141,13 @@
             setProgramChange();
             viewStatus('音色を設定した');
         }).addClass('btn');
-        const lottery_list = GM_list.flatMap(([_, v]) => v).map(v => v[0]);
+        const lottery_list = GM_list.flatMap(([_, v]) => v).filter(v => v[1] < 0x70).map(v => v[0]);
         rpgen3.addBtn(html, 'ランダムな音色の設定', async () => {
+            const electedSet = new Set();
             for (let i = 0; i < 0x10; i++) {
-                selectPrograms[i](rpgen3.randArr(lottery_list)).trigger('change');
+                const elected = rpgen3.randArr(lottery_list.filter(v => !electedSet.has(v)));
+                electedSet.add(elected);
+                selectPrograms[i](elected).trigger('change');
             }
             setProgramChange();
             viewStatus('ランダムな音色を設定した');
