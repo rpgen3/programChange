@@ -16,6 +16,7 @@
     $('<h2>').appendTo(head).text('プログラムチェンジの実行');
     const rpgen3 = await importAll([
         'input',
+        'random',
         'css',
         'util'
     ].map(v => `https://rpgen3.github.io/mylib/export/${v}.mjs`));
@@ -131,16 +132,26 @@
             label: '終了予定：',
             value: '未定'
         });
-        $('<dd>').appendTo(html);
-        rpgen3.addBtn(html, '音色の初期化', async () => {
-            g_midiOutput.allChannels.programChange({data: {program: 0x00}});
-            viewStatus('音色を初期化した');
-        }).addClass('btn');
-        rpgen3.addBtn(html, '音色の設定', async () => {
+        const setProgramChange = () => {
             for (let i = 0; i < 0x10; i++) {
                 g_midiOutput.programChange({data: {channel: i, program: selectPrograms[i]()}});
             }
+        };
+        rpgen3.addBtn(html, '音色の設定', async () => {
+            setProgramChange();
             viewStatus('音色を設定した');
+        }).addClass('btn');
+        const lottery_list = GM_list.flatMap(([_, v]) => v).map(v => v[0]);
+        rpgen3.addBtn(html, 'ランダムな音色の設定', async () => {
+            for (let i = 0; i < 0x10; i++) {
+                selectPrograms[i](rpgen3.randArr(lottery_list)).trigger('change');
+            }
+            setProgramChange();
+            viewStatus('ランダムな音色を設定した');
+        }).addClass('btn');
+        rpgen3.addBtn(html, '音色の初期化', async () => {
+            g_midiOutput.allChannels.programChange({data: {program: 0x00}});
+            viewStatus('音色を初期化した');
         }).addClass('btn');
         const selectPrograms = [...Array(0x10).keys()].map(v => rpgen3.addGroupedSelect(html, {
             label: `Ch.${v + 1}`,
