@@ -130,7 +130,7 @@ Synth Effects
 100|63|FX 4 (atmosphere)|アトモスフィア
 101|64|FX 5 (brightness)|ブライトネス
 102|65|FX 6 (goblins)|ゴブリン
-103|66|FX 7 (echoes)|エコー[要曖昧さ回避]
+103|66|FX 7 (echoes)|エコー
 104|67|FX 8 (sci-fi)|サイファイ
 
 Ethnic
