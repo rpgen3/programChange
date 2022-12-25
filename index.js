@@ -51,7 +51,7 @@
         return value => content.text(value);
     };
     let selectMidiChannel = null;
-    let g_midiOutput = new rpgen4.MidiOutput();
+    let g_midiOutput = null;
     window.g_midiOutput = g_midiOutput;
     {
         const {html} = addHideArea('init');
@@ -61,7 +61,7 @@
         });
         rpgen3.addBtn(html, 'MIDI出力デバイスに接続', async () => {
             try {
-                const midiOutputs = await g_midiOutput.fetchMidiOutputs();
+                const midiOutputs = await rpgen4.MidiOutput.fetchMidiOutputs();
                 selectMidiOutput.update([...midiOutputs].map(([_, v]) => [v.name, v]));
                 viewStatus('接続成功');
             } catch (err) {
@@ -73,7 +73,7 @@
             label: 'MIDI出力デバイスを選択'
         });
         selectMidiOutput.elm.on('change', () => {
-            g_midiOutput.midiOutput = selectMidiOutput();
+            g_midiOutput.midiOutput = new rpgen4.MidiOutput(selectMidiOutput());
         });
         selectMidiChannel = rpgen3.addSelect(html, {
             label: '出力先のチャンネルを選択',
