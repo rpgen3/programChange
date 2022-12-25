@@ -73,7 +73,7 @@
             label: 'MIDI出力デバイスを選択'
         });
         selectMidiOutput.elm.on('change', () => {
-            g_midiOutput.midiOutput = new rpgen4.MidiOutput(selectMidiOutput());
+            g_midiOutput = new rpgen4.MidiOutput(selectMidiOutput());
         });
         selectMidiChannel = rpgen3.addSelect(html, {
             label: '出力先のチャンネルを選択',
