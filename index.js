@@ -142,6 +142,13 @@
             viewStatus('音色を設定した');
         }).addClass('btn');
         const lottery_list = GM_list.flatMap(([_, v]) => v).filter(v => v[1] < 0x70).map(v => v[0]);
+        rpgen3.addBtn(html, '音色の初期化', async () => {
+            for (let i = 0; i < 0x10; i++) {
+                selectPrograms[i](lottery_list[0]).trigger('change');
+            }
+            setProgramChange();
+            viewStatus('音色を初期化した');
+        }).addClass('btn');
         rpgen3.addBtn(html, 'ランダムな音色の設定', async () => {
             const electedSet = new Set();
             for (let i = 0; i < 0x10; i++) {
@@ -151,10 +158,6 @@
             }
             setProgramChange();
             viewStatus('ランダムな音色を設定した');
-        }).addClass('btn');
-        rpgen3.addBtn(html, '音色の初期化', async () => {
-            g_midiOutput.allChannels.programChange({data: {program: 0x00}});
-            viewStatus('音色を初期化した');
         }).addClass('btn');
         const selectPrograms = [...Array(0x10).keys()].map(v => rpgen3.addGroupedSelect(html, {
             label: `Ch.${v + 1}`,
